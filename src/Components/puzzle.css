@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a2b3c;
+}
+
+.game-title {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.square {
+    font-size: 30px;
+    background-color: #726c6c;
+    outline-color: #1a2b3c;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #1a2b3c;
+}
+
+.flex-board {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.count-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    color: chartreuse;
+}
+
+.next button {
+    font-size: 30px;
+    margin-top: 20px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+@media screen and (max-width: 460px) {
+    .flex-board {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .flex-board {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .square {
+        font-size: 80%;
+    }
+}
+
+@media screen and (orientation: landscape){
+    .game {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .count-time {
+        order: 1;
+        width: auto;
+        flex-direction: column;
+        height: 100px;
+    }
+}
